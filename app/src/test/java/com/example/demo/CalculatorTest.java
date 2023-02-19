@@ -1,19 +1,18 @@
 package com.example.demo;
 
-import android.test.suitebuilder.annotation.SmallTest;
-
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
+//import android.test.suitebuilder.annotation.SmallTest;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
+
 import androidx.test.filters.SmallTest;
 
-import com.example.demo.Calculator;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 /**
  * JUnit4 unit tests for the calculator logic. These are local unit tests; no device needed
