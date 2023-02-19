@@ -3,10 +3,12 @@ package com.example.demo;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.view.View.OnHoverListener;
 
 /**
  * SimpleCalc is the initial version of SimpleCalcTest.  It has
@@ -26,6 +28,9 @@ public class MainActivity extends Activity {
     private EditText mOperandOneEditText;
     private EditText mOperandTwoEditText;
 
+    Button mNumberOneButton;
+    Button mFunctionOKButton;
+
     private TextView mResultTextView;
 
     @Override
@@ -38,6 +43,7 @@ public class MainActivity extends Activity {
         mResultTextView = findViewById(R.id.operation_result_text_view);
         mOperandOneEditText = findViewById(R.id.operand_one_edit_text);
         mOperandTwoEditText = findViewById(R.id.operand_two_edit_text);
+        mNumberOneButton = findViewById(R.id.button_1);
     }
 
     /**
@@ -72,6 +78,9 @@ public class MainActivity extends Activity {
     public void onMul(View view) {
         compute(Calculator.Operator.MUL);
     }
+
+
+
 
     private void compute(Calculator.Operator operator) {
         double operandOne;
@@ -123,5 +132,36 @@ public class MainActivity extends Activity {
      */
     private static String getOperandText(EditText operandEditText) {
         return operandEditText.getText().toString();
+    }
+
+
+    /**
+     * OnClick method called when the ONE Button is pressed.
+     */
+    public void value1(View view){ mOperandOneEditText.setText("1");}
+
+
+    /**
+     * OnClick method called when the DEL Button is pressed.
+     */
+    public void delValue(View view) {
+        mOperandOneEditText.setText("");
+        mOperandTwoEditText.setText("");
+    }
+
+    /**
+     * OnClick method called when the OK Button is pressed.
+     */
+    public void okValue(View view) {
+        mFunctionOKButton = findViewById(R.id.button_ok);
+        mFunctionOKButton.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+
+                mOperandTwoEditText.requestFocus();
+            }
+        });
+
+
     }
 }
