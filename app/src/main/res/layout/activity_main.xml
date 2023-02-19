@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-android:padding="30dp"
+    android:paddingVertical="30dp"
+    android:paddingHorizontal="20dp"
     tools:context=".MainActivity">
 
     <ImageView
@@ -56,6 +57,7 @@ android:padding="30dp"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:textSize="30dp"
         />
 
     <GridLayout
@@ -113,6 +115,7 @@ android:padding="30dp"
             android:backgroundTint="#FEFFFF"
             android:textColor="#000000"
             android:textSize="30dp"
+            android:onClick="value1"
             />
 
         <Button
@@ -225,6 +228,7 @@ android:padding="30dp"
             android:backgroundTint="#FF9800"
             android:textColor="#000000"
             android:textSize="20dp"
+            android:onClick="delValue"
 
             />
 
@@ -265,7 +269,7 @@ android:padding="30dp"
             android:backgroundTint="#FF9800"
             android:textColor="#000000"
             android:textSize="20dp"
-
+            android:onClick="okValue"
             />
 
 
